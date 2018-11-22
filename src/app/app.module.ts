@@ -12,6 +12,9 @@ import { BooksModule } from './books/books.module';
 import { NotFoundComponent } from './ui-core/not-found/not-found.component';
 import { AuthorsComponent } from './authors/authors/authors.component';
 import { ArticlesComponent } from './articles/articles/articles.component';
+import { BookService } from './books/books.service';
+import { AuthorModule } from './authors/author.module';
+import { AuthorService } from './authors/authors/author.service';
 
 @NgModule({
   declarations: [
@@ -28,9 +31,10 @@ import { ArticlesComponent } from './articles/articles/articles.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BooksModule
+    BooksModule,
+    AuthorModule
   ],
-  providers: [],
+  providers: [BookService, AuthorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

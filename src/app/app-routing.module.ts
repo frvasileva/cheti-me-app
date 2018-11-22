@@ -16,6 +16,10 @@ const appRoutes: Routes = [
   //     { path: ':id', component: BooksDetailComponent }
   //   ]
   // },
+  // {
+  //     path: 'books',
+  //     loadChildren: './books/books.module#BooksModule' // оправи си пътя до модула
+  // },
   { path: 'about-us', component: AboutComponent },
   { path: 'authors', component: AuthorsComponent },
   { path: 'articles', component: ArticlesComponent },
