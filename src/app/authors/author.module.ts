@@ -4,10 +4,12 @@ import { RouterModule } from "@angular/router";
 
 import { AuthorDetailsComponent } from './author-details/author-details.component';
 import { AuthorsRoutingModule } from "./authors-routing.module";
+import { AuthorsListComponent } from './authors-list/authors-list.component';
 
 @NgModule({
   declarations: [
-    AuthorDetailsComponent
+    AuthorDetailsComponent,
+    AuthorsListComponent
   ],
   imports: [
     CommonModule,

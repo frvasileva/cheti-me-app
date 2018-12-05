@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthorService } from '../authors/author.service';
+import { AuthorService } from '../author.service';
 import { Author } from '../author.model';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
@@ -21,9 +21,7 @@ export class AuthorDetailsComponent implements OnInit {
       (params: Params) => {
         this.id = +params['id'];
         this.author = this.authorService.getAuthor(this.id.toString());
-        console.log(this.author);
       }
     )
   }
-
 }

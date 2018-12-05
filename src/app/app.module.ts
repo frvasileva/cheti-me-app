@@ -10,11 +10,11 @@ import { AboutComponent } from './ui-core/about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BooksModule } from './books/books.module';
 import { NotFoundComponent } from './ui-core/not-found/not-found.component';
-import { AuthorsComponent } from './authors/authors/authors.component';
+import { AuthorsComponent } from './authors/authors.component';
 import { ArticlesComponent } from './articles/articles/articles.component';
 import { BookService } from './books/books.service';
 import { AuthorModule } from './authors/author.module';
-import { AuthorService } from './authors/authors/author.service';
+import { AuthorService } from './authors/author.service';
 
 @NgModule({
   declarations: [
