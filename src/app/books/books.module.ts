@@ -4,7 +4,7 @@ import { BooksListComponent } from "./books-list/books-list.component";
 import { BooksDetailComponent } from "./books-detail/books-detail.component";
 import { BooksComponent } from "./books.component";
 import { BooksRoutingModule } from "./books-routing.module";
-import { RouterModule } from '@angular/router';
+import { RouterModule } from "@angular/router";
 
 
 

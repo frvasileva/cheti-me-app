@@ -5,7 +5,7 @@ export class Book {
   public title: string;
   public description: string;
   public coverPath: string;
-  public author: Author
+  public author?: Author
 
   constructor(id: string, title: string, description: string, coverPath: string, author: Author){
     this.id = id;
