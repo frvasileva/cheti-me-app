@@ -8,14 +8,13 @@ import { AuthorsListComponent } from "./authors-list/authors-list.component";
 
 const authorsRoutes: Routes = [
   {
-    path: 'authors', component: AuthorsComponent,
+    path: "", component: AuthorsComponent,
     children: [
-      { path: '', component: AuthorsListComponent },
-      { path: 'details/:id', component: AuthorDetailsComponent },
-      { path: '**', component: NotFoundComponent }
+      { path: "", component: AuthorsListComponent },
+      { path: "details/:id", component: AuthorDetailsComponent },
     ]
   }
-]
+];
 
 @NgModule({
   imports: [

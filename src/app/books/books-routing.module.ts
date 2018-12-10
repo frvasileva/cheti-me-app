@@ -8,13 +8,13 @@ import { NotFoundComponent } from "../ui-core/not-found/not-found.component";
 
 const booksRoutes: Routes = [
   {
-    path: 'books', component: BooksComponent,
+    path: "", component: BooksComponent,
     children: [
-      { path: '', component: BooksListComponent },
-      { path: 'details/:id', component: BooksDetailComponent },
-      { path: '**', component: NotFoundComponent }
+      { path: "", component: BooksListComponent },
+      { path: "details/:id", component: BooksDetailComponent },
+      // { path: "**", component: NotFoundComponent }
       ]
-  },]
+  }, ];
 
 @NgModule({
   imports: [
