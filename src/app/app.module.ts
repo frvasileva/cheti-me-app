@@ -1,4 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
@@ -12,6 +13,7 @@ import { NotFoundComponent } from "./ui-core/not-found/not-found.component";
 import { ArticlesComponent } from "./articles/articles/articles.component";
 import { BookService } from "./books/books.service";
 import { AuthorService } from "./authors/author.service";
+import { ContactComponent } from "./ui-core/contact/contact.component";
 
 @NgModule({
   declarations: [
@@ -22,9 +24,10 @@ import { AuthorService } from "./authors/author.service";
     AboutComponent,
     LayoutComponent,
     NotFoundComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    ContactComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
   providers: [BookService, AuthorService],
   bootstrap: [AppComponent]
 })

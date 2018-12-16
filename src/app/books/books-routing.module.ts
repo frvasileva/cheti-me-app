@@ -3,25 +3,22 @@ import { RouterModule, Routes } from "@angular/router";
 import { BooksComponent } from "./books.component";
 import { BooksListComponent } from "./books-list/books-list.component";
 import { BooksDetailComponent } from "./books-detail/books-detail.component";
-import { NotFoundComponent } from "../ui-core/not-found/not-found.component";
-
+import { AddBookComponent } from "./add-book/add-book.component";
 
 const booksRoutes: Routes = [
   {
-    path: "", component: BooksComponent,
+    path: "",
+    component: BooksComponent,
     children: [
       { path: "", component: BooksListComponent },
       { path: "details/:id", component: BooksDetailComponent },
-      // { path: "**", component: NotFoundComponent }
-      ]
-  }, ];
+      { path: "add", component: AddBookComponent }
+    ]
+  }
+];
 
 @NgModule({
-  imports: [
-    RouterModule.forChild(booksRoutes)
-  ],
+  imports: [RouterModule.forChild(booksRoutes)],
   exports: [RouterModule]
 })
-export class BooksRoutingModule {
-
-}
+export class BooksRoutingModule {}

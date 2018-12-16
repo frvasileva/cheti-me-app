@@ -5,10 +5,11 @@
 // fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab&subset=cyrillic");
 @import "src/app/ui-style/variables.scss";
+@import "src/app/ui-style/form-elements.scss";
+@import "src/app/ui-style/buttons.scss";
 
 body {
   font-family: $main-font;
   color: $main-color;
   font-size: 20px;
 }
-
