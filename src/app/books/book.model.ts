@@ -7,6 +7,7 @@ export class Book {
   public description?: string;
   public coverPath?: string;
   public author?: Author;
+  public tags: string[];
 
   constructor(
     id: string,
@@ -14,7 +15,8 @@ export class Book {
     bookType: string,
     description: string,
     coverPath: string,
-    author: Author
+    author: Author,
+    tags: string[]
   ) {
     this.id = id;
     this.title = title;
@@ -22,6 +24,7 @@ export class Book {
     this.description = description;
     this.coverPath = coverPath;
     this.author = author;
+    this.tags = tags;
   }
 
   bla(obj: { X: BookType }) {

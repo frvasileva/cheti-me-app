@@ -1,11 +1,36 @@
 <div class="row">
-  <div class="col-sm-6 col-md-12">
+  <div class="col-10">
     <div class="book-list-item">
       <div class="caption">
-        <h3 class="book-title">{{book.title}}</h3>
-        <h3 class="book-author">{{book.author.name}}</h3>
+        <h3 class="book-title">{{ book.title }}</h3>
       </div>
-      <img src="https://spark.adobe.com/images/landing/examples/how-to-book-cover.jpg" alt="..." width="300">
+      <div class="book-attributes">
+        <img src="{{book.coverPath}}" alt="..." width="300" class="cover" />
+        <a
+          class="button primary"
+          [routerLink]="['/books/request-book', book.id]"
+          class="book-author"
+        >
+          Request book
+        </a>
+        <a
+          class="nav-link"
+          [routerLink]="['/authors/details', book.author.id]"
+          class="book-author"
+        >
+          {{ book.author.name }}
+        </a>
+
+        <a
+          class="nav-link"
+          [routerLink]="['/books', book.bookType]"
+          class="book-author"
+        >
+          {{ book.bookType }}
+        </a>
+
+        <p class="description">{{ book.description }}</p>
+      </div>
     </div>
   </div>
 </div>

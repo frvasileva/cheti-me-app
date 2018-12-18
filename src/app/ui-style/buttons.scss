@@ -4,6 +4,7 @@
   font-family: $main-font;
   text-transform: uppercase;
   border-radius: 5px;
+  text-decoration: none;
 
   &:disabled,
   &[disabled] {
@@ -13,12 +14,14 @@
   &:disabled,
   &[disabled]:hover {
     background-color: red;
+    text-decoration: none;
   }
 
   &:hover {
     cursor: pointer;
     background-color: $main-color-darker;
     transition: 0.2s;
+    text-decoration: none;
   }
 
   &.primary {
@@ -31,5 +34,12 @@
   &.primary:hover {
     transition: 0.2s;
     background-color: $main-color-darker;
+  }
+
+  &.action-btn {
+    padding: 10px;
+    max-width: 280px;
+    background-color: $lighter-background;
+    color: black;
   }
 }

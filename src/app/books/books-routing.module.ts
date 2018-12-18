@@ -4,6 +4,7 @@ import { BooksComponent } from "./books.component";
 import { BooksListComponent } from "./books-list/books-list.component";
 import { BooksDetailComponent } from "./books-detail/books-detail.component";
 import { AddBookComponent } from "./add-book/add-book.component";
+import { RequestBookComponent } from "./request-book/request-book.component";
 
 const booksRoutes: Routes = [
   {
@@ -12,7 +13,8 @@ const booksRoutes: Routes = [
     children: [
       { path: "", component: BooksListComponent },
       { path: "details/:id", component: BooksDetailComponent },
-      { path: "add", component: AddBookComponent }
+      { path: "add", component: AddBookComponent },
+      { path: "request-book/:id", component: RequestBookComponent }
     ]
   }
 ];
