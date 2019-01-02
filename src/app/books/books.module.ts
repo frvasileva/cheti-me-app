@@ -7,7 +7,7 @@ import { BooksRoutingModule } from "./books-routing.module";
 import { RouterModule } from "@angular/router";
 import { AddBookComponent } from "./add-book/add-book.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { RequestBookComponent } from './request-book/request-book.component';
+import { RequestBookComponent } from "./request-book/request-book.component";
 
 @NgModule({
   declarations: [

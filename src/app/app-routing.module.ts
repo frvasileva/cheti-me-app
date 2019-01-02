@@ -21,6 +21,10 @@ const appRoutes: Routes = [
     path: "user",
     loadChildren: "./user/user.module#UserModule"
   },
+  {
+    path: "messages",
+    loadChildren: "./messages/message.module#MessagesModule"
+  },
   { path: "about-us", component: AboutComponent },
   { path: "contact-us", component: ContactComponent },
   { path: "articles", component: ArticlesComponent },

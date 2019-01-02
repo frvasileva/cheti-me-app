@@ -13,7 +13,10 @@ import { NotFoundComponent } from "./ui-core/not-found/not-found.component";
 import { ArticlesComponent } from "./articles/articles/articles.component";
 import { BookService } from "./books/books.service";
 import { AuthorService } from "./authors/author.service";
+import { UserService } from "./user/user.service";
 import { ContactComponent } from "./ui-core/contact/contact.component";
+import { QuotesComponent } from "./quotes/quotes/quotes.component";
+
 
 @NgModule({
   declarations: [
@@ -25,10 +28,11 @@ import { ContactComponent } from "./ui-core/contact/contact.component";
     LayoutComponent,
     NotFoundComponent,
     ArticlesComponent,
-    ContactComponent
+    ContactComponent,
+    QuotesComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
-  providers: [BookService, AuthorService],
+  providers: [BookService, AuthorService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

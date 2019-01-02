@@ -25,4 +25,17 @@ export class BooksDetailComponent implements OnInit {
       console.log(this.book);
     });
   }
+
+  addToWantToReadList(bookId) {
+    console.log(bookId);
+    this.bookService.addToWantToReadList(+bookId);
+  }
+
+  addToAlreadyRead(bookId) {
+    console.log("book {0} added to already read books", +bookId);
+  }
+
+  wantToShare(bookId) {
+    console.log("User want to share book {0}", +bookId);
+  }
 }

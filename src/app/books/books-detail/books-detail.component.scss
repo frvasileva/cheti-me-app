@@ -1,5 +1,25 @@
 @import "src/app/ui-style/variables.scss";
 
+.books-detail-top {
+  background: #eee;
+}
+
+.book-header {
+  width: 50%;
+  display: inline-block;
+}
+
+.book-title {
+}
+
+.book-author {
+}
+
+.book-cover {
+  width: 50%;
+  display: inline-block;
+}
+
 .book-list-item {
   color: black;
   font-family: $secondary-font;
@@ -23,4 +43,11 @@
   .book-attributes a {
     display: block;
   }
+}
+
+//TODO: TEMP styling! DELETE IT!
+.button {
+  display: block;
+  min-width: 330px;
+  margin-bottom: 10px;
 }

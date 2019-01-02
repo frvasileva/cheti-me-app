@@ -10,14 +10,25 @@ import { Subscription } from "rxjs";
   styleUrls: ["./books-list.component.scss"]
 })
 export class BooksListComponent implements OnInit {
-
   books: Book[];
   subscription: Subscription;
 
-  constructor(private service: BookService) { }
+  constructor(private bookService: BookService) {}
 
   ngOnInit() {
-    this.books = this.service.getBooks();
+    this.books = this.bookService.getBooks();
   }
 
+  addToWantToReadList(bookId) {
+    console.log(bookId);
+    this.bookService.addToWantToReadList(+bookId);
+  }
+
+  addToAlreadyRead(bookId) {
+    console.log("book {0} added to already read books", +bookId);
+  }
+
+  wantToShare(bookId) {
+    console.log("User want to share book {0}", +bookId);
+  }
 }
