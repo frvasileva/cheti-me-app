@@ -1,3 +1,26 @@
-<p>
-  message-item works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <strong>
+        <p>{{ message.subject }}</p>
+      </strong>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <p>{{ message.receiver }}</p>
+    </div>
+    <div class="col-8">
+      <div class="pull-right">
+        <p>{{ message.readOn | date: "medium" }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <p>{{ message.body }}</p>
+    </div>
+  </div>
+</div>
+
+<app-send-message></app-send-message>

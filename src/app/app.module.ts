@@ -16,6 +16,7 @@ import { AuthorService } from "./authors/author.service";
 import { UserService } from "./user/user.service";
 import { ContactComponent } from "./ui-core/contact/contact.component";
 import { QuotesComponent } from "./quotes/quotes/quotes.component";
+import { MessageService } from "./messages/message.service";
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { QuotesComponent } from "./quotes/quotes/quotes.component";
     QuotesComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
-  providers: [BookService, AuthorService, UserService],
+  providers: [BookService, AuthorService, UserService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
