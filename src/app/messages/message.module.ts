@@ -7,13 +7,15 @@ import { MessagesComponent } from "./messages.component";
 import { MessageItemComponent } from "./message-item/message-item.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { SendMessageComponent } from "./send-message/send-message.component";
+import { ConversationComponent } from './conversation/conversation.component';
 
 @NgModule({
   declarations: [
     MessageListComponent,
     MessagesComponent,
     MessageItemComponent,
-    SendMessageComponent
+    SendMessageComponent,
+    ConversationComponent
   ],
   imports: [
     CommonModule,

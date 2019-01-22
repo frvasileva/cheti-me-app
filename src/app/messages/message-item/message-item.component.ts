@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { MessageService } from "../message.service";
 import { ActivatedRoute, Params } from "@angular/router";
 import { Message } from "../model/message.model";
@@ -12,17 +12,19 @@ export class MessageItemComponent implements OnInit {
   message: Message;
   messageId: string;
 
+  @Input() listPost: Message[];
+
   constructor(
     private messageService: MessageService,
     private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
-    this.route.params.subscribe((params: Params) => {
-      this.messageId = params["id"];
-      this.message = this.messageService.getMessagesById(this.messageId);
+    //    console.log(this.listPost);
+  }
 
-      console.log(this.message);
-    });
+  onDeleteMessage(messageId) {
+    this.messageService.deleteMessage(messageId);
+    console.log("messagee deleted ", messageId);
   }
 }

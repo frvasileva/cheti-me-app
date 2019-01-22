@@ -25,7 +25,7 @@ export class MessageService {
       new Date(),
       false,
       "книги на издателство Тиара букс",
-      "subject mail",
+      "subject mail"
     ),
     new Message(
       3,
@@ -80,5 +80,13 @@ export class MessageService {
     console.log({ id });
     console.log(this.messages);
     return this.messages.find(message => message.id == id);
+  }
+
+  sendMessage(message: Message) {
+    this.messages.push(message);
+  }
+
+  deleteMessage(messageId: number) {
+    this.messages.splice(messageId, 1);
   }
 }
